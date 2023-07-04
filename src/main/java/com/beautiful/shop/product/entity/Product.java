@@ -1,6 +1,10 @@
 package com.beautiful.shop.product.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+//import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Blob;
 

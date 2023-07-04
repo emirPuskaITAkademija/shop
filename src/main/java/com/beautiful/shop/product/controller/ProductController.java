@@ -4,6 +4,7 @@ import com.beautiful.shop.product.entity.Product;
 import com.beautiful.shop.product.entity.ProductRepository;
 import com.beautiful.shop.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Role;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

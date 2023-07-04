@@ -13,6 +13,9 @@ import java.util.Collections;
 CustomerUserDetailsService
 UserDetails <--CustomUserDetails--> User(users)
  */
+// User DB <---- CustomUserDetails ---> UserDetails
+// Privilege DB <---- Mapiranje između  ---> Role
+//
 public class CustomUserDetails implements UserDetails {
     private final User user;
 
@@ -20,8 +23,10 @@ public class CustomUserDetails implements UserDetails {
         this.user = user;
     }
 
+    //https://www.baeldung.com/role-and-privilege-for-spring-security-registration
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        //USER EMPLOYEE MANAGER ADMIN
         return Collections.singleton(new SimpleGrantedAuthority(user.getRole()));
     }
 
